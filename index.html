@@ -1,0 +1,337 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>RATO</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="RATO. Era solo un rato. Colección de lanzamiento: Bajamos un momento.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Reenie+Beanie&display=swap">
+<style>/* Concepto: póster de calle sobre campo Tomate (eco de la referencia GVK): escritura a mano enorme detrás, camisetas recortadas encima, menú apilado a la derecha y bordes rasgados entre zonas. Un solo mundo visual, sin modo oscuro. */
+:root{
+  --tomate:#CE3431; --tiza:#F3F0E8; --asfalto:#242425; --cielo:#9DC8DA; --mant:#EDCF78; --blanco:#FFFFFF;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-scrawl:"Reenie Beanie","Bradley Hand","Segoe Print",cursive;
+  --gut:max(16px, env(safe-area-inset-left, 0px));
+  --gutr:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tiza);color:var(--asfalto);font-family:var(--f-display);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--asfalto);outline-offset:3px;border-radius:2px}
+.red a:focus-visible,.foot a:focus-visible{outline-color:var(--mant)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1320px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gutr)}
+.scrawl{font-family:var(--f-scrawl);text-transform:uppercase;letter-spacing:.07em;line-height:.74;margin:0;font-weight:400;pointer-events:none;user-select:none}
+.torn{display:block;width:100%;height:clamp(34px,5vw,62px);margin-top:-1px}
+.torn.to-red path{fill:var(--tomate)}
+.torn.to-tiza path{fill:var(--tiza)}
+.kicker{font-family:var(--f-mono);font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin:0}
+
+/* ---------- NAV ---------- */
+.nav{font-family:var(--f-display);font-weight:500;font-stretch:100%;text-align:right;line-height:1.02}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav a{text-decoration:none;font-size:clamp(20px,2.1vw,27px);letter-spacing:-.01em}
+.nav a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.nav-tees{display:flex;justify-content:flex-end;gap:12px;margin-top:10px}
+.nav-hand{padding-top:5px}
+.nav-hand .iso{width:clamp(22px,2.4vw,32px);height:auto;display:block}
+.nav-hand .iso path{fill:currentColor}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--tiza);position:relative;overflow-x:clip}
+.hero-wrap{position:relative;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr auto;min-height:clamp(560px,62vw,820px);padding-top:22px;padding-bottom:8px}
+.hero-logo{grid-column:1;grid-row:1;width:clamp(150px,20vw,270px);color:var(--tomate);position:relative;z-index:4;align-self:start}
+.logo{display:block;width:100%;height:auto}
+.logo path,.apilado path,.giant path{fill:currentColor}
+.nav-hero{grid-column:2;grid-row:1 / span 2;color:var(--tomate);position:relative;z-index:4}
+.hero-scrawl{position:absolute;left:var(--gut);top:clamp(80px,9vw,130px);z-index:3;color:var(--tomate);font-size:clamp(108px,18vw,272px)}
+.hero-tees{grid-column:1 / -1;grid-row:2;position:relative;min-height:clamp(320px,40vw,560px);margin-right:clamp(0px,14vw,210px)}
+.ht{position:absolute;filter:drop-shadow(0 18px 22px rgba(36,36,37,.18))}
+.ht1{width:40%;left:26%;top:10%;transform:rotate(-9deg)}
+.ht2{width:46%;left:42%;top:2%;transform:rotate(4deg);z-index:2}
+.ht3{width:36%;left:72%;top:26%;transform:rotate(11deg)}
+.hero-note{grid-column:1 / -1;grid-row:3;display:flex;flex-direction:column;gap:2px;margin:0;position:relative;z-index:4}
+.hero-note span{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.hero-note b{font-weight:900;font-stretch:62%;font-style:italic;text-transform:uppercase;font-size:clamp(34px,5vw,64px);line-height:.9;color:var(--asfalto)}
+
+/* ---------- RED FIELD ---------- */
+.red{background:var(--tomate);color:var(--blanco);overflow-x:clip}
+.strip{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--mant);font-size:clamp(20px,2.2vw,28px);font-weight:500;padding-block:4px 40px}
+.strip p{margin:0}
+.red-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(16px,3vw,48px);align-items:start}
+.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 22px);color:var(--mant)}
+.items{display:flex;flex-direction:column;gap:clamp(70px,9vw,140px);min-width:0;padding-bottom:40px}
+.intro{position:relative;min-height:clamp(200px,22vw,300px)}
+.intro-scrawl{color:var(--mant);font-size:clamp(84px,12.5vw,190px)}
+.intro-text{position:relative;max-width:34ch;font-size:clamp(18px,1.6vw,22px);line-height:1.4;margin:clamp(20px,2.4vw,36px) 0 0 clamp(0px,18vw,260px);text-wrap:pretty}
+
+.item{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:16px;align-items:start}
+.item-scrawl{position:absolute;top:-.12em;color:var(--mant);font-size:clamp(100px,15vw,232px);z-index:0}
+.item-l .item-scrawl{left:-.04em}
+.item-r .item-scrawl{right:-.02em;text-align:right}
+.shot{margin:0;position:relative;z-index:1}
+.shot img{transition:transform .5s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 16px 20px rgba(36,36,37,.25))}
+.item:hover .back img{transform:rotate(-2deg) scale(1.02)}
+.back{grid-row:1 / span 2}
+.front{grid-row:1}
+.info{grid-row:2;position:relative;z-index:2}
+.item-l .back{grid-column:1 / span 7;margin-top:clamp(70px,8vw,120px)}
+.item-l .front{grid-column:9 / span 4;margin-top:0;transform:rotate(5deg)}
+.item-l .info{grid-column:8 / span 5}
+.item-r .back{grid-column:6 / span 7;margin-top:clamp(70px,8vw,120px)}
+.item-r .front{grid-column:1 / span 4;transform:rotate(-5deg)}
+.item-r .info{grid-column:1 / span 5}
+.vert{position:absolute;top:clamp(110px,12vw,170px);writing-mode:vertical-rl;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:0;z-index:2}
+.item-l .vert{left:calc(100% * 7 / 12 - 22px)}
+.item-r .vert{left:calc(100% * 5 / 12 + 8px)}
+.num{font-family:var(--f-mono);font-size:14px;margin:0 0 4px;letter-spacing:.06em}
+.item-name{font-weight:900;font-stretch:62%;font-style:italic;text-transform:uppercase;font-size:clamp(44px,5.4vw,78px);line-height:.88;margin:0 0 12px;text-wrap:balance}
+.lead{font-size:clamp(18px,1.5vw,21px);line-height:1.35;margin:0 0 18px;max-width:32ch}
+.spec{margin:0;display:grid}
+.spec div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;padding-block:8px;border-top:1px solid rgba(255,255,255,.4)}
+.spec dt{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+.spec dd{margin:0;font-size:15.5px;line-height:1.4}
+
+.bigmark{padding-block:clamp(60px,9vw,130px) clamp(40px,6vw,90px)}
+.bigmark-wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:center;column-gap:16px}
+.apilado{grid-column:1 / span 5;grid-row:1;width:100%;height:auto;color:var(--tiza);position:relative;z-index:1}
+.bm-tee{grid-column:6 / span 6;grid-row:1;transform:rotate(7deg);filter:drop-shadow(0 18px 24px rgba(36,36,37,.3));position:relative;z-index:2}
+.bm-line{grid-column:1 / -1;margin:clamp(24px,3vw,40px) 0 0;font-weight:900;font-stretch:62%;font-style:italic;text-transform:uppercase;font-size:clamp(34px,4.6vw,64px);line-height:.92;color:var(--mant)}
+
+/* ---------- TIZA ---------- */
+.tiza{background:var(--tiza)}
+.marca{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px 48px;padding-block:clamp(48px,7vw,100px)}
+.marca .kicker{grid-column:1 / -1}
+.relato{font-size:clamp(19px,1.7vw,23px);line-height:1.45;max-width:36ch}
+.relato p{margin:0 0 .8em}
+.lema{margin:0;align-self:end;justify-self:end;text-align:right;font-weight:900;font-stretch:62%;font-style:italic;text-transform:uppercase;color:var(--tomate);font-size:clamp(68px,10.5vw,168px);line-height:.84}
+.como{background:var(--tiza)}
+.como-wrap{border-top:3px solid var(--asfalto);padding-block:28px clamp(56px,7vw,96px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 48px}
+.estado{margin:0;display:grid}
+.estado div{display:grid;grid-template-columns:minmax(120px,1fr) minmax(0,2fr);gap:16px;padding-block:12px;border-bottom:1px solid #cfc9bd}
+.estado dt{font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+.estado dd{margin:0;font-size:18px;font-variant-numeric:tabular-nums}
+.como-note{grid-column:2;margin:0;font-size:15px;color:#55534e;max-width:52ch}
+
+/* ---------- FOOTER ---------- */
+.foot{background:var(--asfalto);color:var(--tiza);overflow:hidden}
+.foot-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px 32px;padding-block:36px 24px}
+.foot-lema{margin:0;font-weight:900;font-stretch:62%;font-style:italic;font-size:clamp(26px,3vw,40px)}
+.foot-links{list-style:none;margin:0;padding:0;display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{text-decoration:none;font-size:18px}
+.foot-links a:hover{text-decoration:underline}
+.foot-copy{margin:0;font-family:var(--f-mono);font-size:13px;color:#b9b5ac}
+.foot-giant{color:var(--tomate);aspect-ratio:781 / 150;overflow:hidden;padding-left:var(--gut);padding-right:var(--gutr);padding-bottom:env(safe-area-inset-bottom,0px)}
+.giant{width:100%;height:auto;display:block}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:860px){
+  .side{display:none}
+  .red-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-wrap{grid-template-columns:1fr auto;min-height:0}
+  .hero-wrap{grid-template-rows:auto auto auto auto}
+  .nav-hero{grid-row:1}
+  .intro-text{margin-left:0}
+  .hero-scrawl{position:relative;grid-column:1 / -1;grid-row:2;top:auto;left:auto;margin-top:22px;font-size:clamp(78px,23vw,170px)}
+  .hero-tees{grid-row:3;margin-right:0;min-height:clamp(240px,74vw,520px);margin-top:clamp(-130px,-26vw,-80px)}
+  .hero-note{grid-row:4}
+  .ht1{width:50%;left:0;top:14%}
+  .ht2{width:56%;left:26%;top:0}
+  .ht3{width:42%;left:58%;top:30%}
+  .nav a{font-size:20px}
+  .item{display:block}
+  .item-scrawl{position:relative;font-size:clamp(66px,19vw,150px);letter-spacing:.03em;top:0}
+  .item-r .item-scrawl{text-align:right}
+  .back{margin-top:-.9em !important;position:relative}
+  .item .back{width:88%}
+  .item-r .back{margin-left:auto}
+  .front{position:absolute !important;width:42%;top:clamp(170px,42vw,330px)}
+  .item-l .front{right:-2%}
+  .item-r .front{left:-2%}
+  .info{margin-top:24px}
+  .vert{display:none}
+  .marca,.como-wrap{grid-template-columns:minmax(0,1fr)}
+  .como-note{grid-column:1}
+  .lema{justify-self:start;text-align:left}
+  .bigmark-wrap{display:block;position:relative}
+  .apilado{width:72%}
+  .bm-tee{width:58%;position:absolute;right:4%;top:20%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .shot img{transition:none}
+  .item:hover .back img{transform:none}
+}
+</style>
+
+<header class="hero" id="inicio">
+ <div class="wrap hero-wrap">
+  <a class="hero-logo" href="#inicio" aria-label="RATO, inicio"><svg class="logo" viewBox="9 5 781 202" role="img" aria-label="RATO"><g fill="currentColor"><path d="M 204.500 6.587 C 189.939 7.731, 175.607 8.890, 156 10.508 C 153.525 10.712, 146.100 11.155, 139.500 11.493 C 132.900 11.831, 121.425 12.751, 114 13.538 C 106.575 14.325, 92.400 15.489, 82.500 16.126 C 72.600 16.763, 60.690 17.558, 56.034 17.892 L 47.567 18.500 46.693 22.500 C 46.212 24.700, 42.976 38.200, 39.502 52.500 C 36.027 66.800, 32.479 81.875, 31.618 86 C 26.768 109.209, 22.753 128.280, 21.511 134 C 20.735 137.575, 19.160 145.675, 18.010 152 C 16.861 158.325, 15.288 166.875, 14.515 171 C 12.545 181.513, 8.801 207.138, 9.183 207.495 C 9.601 207.886, 31.349 203.890, 63.500 197.513 L 89.500 192.356 91.102 179.928 C 92.659 167.848, 96.777 143.889, 97.405 143.262 C 97.576 143.091, 102.393 148.197, 108.108 154.610 C 123.295 171.650, 131.322 180.314, 141.993 191.181 L 151.500 200.862 163.508 196.093 C 170.113 193.469, 177.088 190.588, 179.008 189.688 C 180.929 188.789, 186.907 186.467, 192.294 184.529 C 197.681 182.590, 203.897 180.130, 206.108 179.062 C 208.318 177.994, 209.986 177.454, 209.813 177.861 C 205.522 188.009, 202.841 195.174, 203.199 195.533 C 203.450 195.783, 209.020 195.334, 215.577 194.535 C 222.135 193.735, 232 192.610, 237.500 192.033 C 252.397 190.473, 274.895 187.446, 275.341 186.942 C 275.556 186.699, 278.261 179.899, 281.351 171.830 C 284.441 163.762, 287.493 156.013, 288.131 154.611 L 289.293 152.062 296.396 149.380 C 300.303 147.904, 307.311 145.215, 311.970 143.402 C 316.628 141.590, 320.585 140.252, 320.763 140.430 C 321.105 140.771, 322.252 153.785, 324.120 178.500 C 324.744 186.750, 325.411 193.676, 325.602 193.892 C 326.048 194.393, 340.452 189.133, 354.041 183.507 C 359.839 181.107, 365.914 178.831, 367.541 178.450 C 370.376 177.787, 398.135 167.174, 398.842 166.483 C 399.356 165.981, 390.710 134.221, 387.004 123 C 383.618 112.747, 381.102 103.538, 378.170 90.671 L 375.246 77.843 376.373 77.498 C 376.993 77.309, 383.350 76.897, 390.500 76.582 C 397.650 76.268, 409.462 75.733, 416.750 75.392 L 430 74.773 430 75.676 C 430 76.173, 428.638 81.062, 426.973 86.540 C 422.856 100.090, 421.229 105.620, 413.012 134 C 409.110 147.475, 405.262 160.750, 404.461 163.500 C 400.797 176.082, 396.129 194.462, 396.503 194.836 C 396.730 195.063, 407.848 193.833, 421.208 192.102 C 434.569 190.371, 446.850 188.785, 448.500 188.578 C 464.552 186.562, 477.555 184.761, 477.804 184.520 C 478.099 184.234, 480.314 161.709, 481.443 147.500 C 483.645 119.818, 487.908 82.170, 490.062 71.390 L 491.083 66.281 499.292 64.178 C 503.806 63.022, 513.793 60.575, 521.484 58.741 L 535.468 55.405 538.776 47.503 C 540.596 43.156, 543.178 36.427, 544.514 32.550 C 545.850 28.672, 548.523 21.675, 550.454 17 C 552.386 12.325, 553.974 7.892, 553.983 7.149 L 554 5.797 546.750 6.482 C 542.763 6.859, 537.925 7.334, 536 7.537 C 534.075 7.741, 525.975 8.392, 518 8.985 C 510.025 9.578, 492.475 10.926, 479 11.981 C 465.525 13.036, 448.650 14.173, 441.500 14.507 C 434.350 14.841, 427.600 15.307, 426.500 15.541 C 424.729 15.919, 411.321 17.145, 393.500 18.560 C 390.200 18.821, 385.618 19.276, 383.318 19.569 L 379.136 20.102 378.586 22.801 C 378.283 24.285, 377.109 31.125, 375.977 38 C 374.845 44.875, 373.409 52.975, 372.785 56 L 371.651 61.500 370.317 56 C 368.232 47.400, 362.259 17.082, 361.488 11.180 L 360.793 5.859 357.146 6.400 C 355.141 6.697, 347.650 7.652, 340.500 8.523 C 329.979 9.803, 299.214 14.296, 284.500 16.701 L 281.500 17.191 278.598 23.845 C 277.002 27.505, 273.010 36.125, 269.726 43 C 266.442 49.875, 260.902 61.667, 257.414 69.205 C 253.926 76.743, 250.626 83.718, 250.081 84.705 C 248.818 86.988, 243.630 98.381, 239.608 107.702 C 237.899 111.663, 232.232 124.795, 227.015 136.884 L 217.529 158.865 211.515 153.179 C 185.432 128.523, 172 115.476, 172 114.798 C 172 114.359, 172.440 114, 172.978 114 C 174.045 114, 177.257 112.511, 211.500 96.140 L 234.500 85.145 236.805 79.322 C 238.073 76.120, 240.003 71.555, 241.094 69.178 C 244.577 61.590, 248.697 50.751, 251.425 42 L 254.075 33.500 246.287 26.215 C 237.176 17.692, 222.422 4.944, 221.877 5.126 C 221.670 5.195, 213.850 5.853, 204.500 6.587 M 625.994 6.934 C 624.615 7.354, 622.012 8.460, 620.209 9.392 C 618.405 10.325, 611.433 12.795, 604.715 14.883 C 597.997 16.970, 589.125 20.062, 585 21.753 C 580.875 23.445, 572.429 26.759, 566.230 29.118 L 554.961 33.408 552.124 38.454 C 550.564 41.229, 547.582 46.612, 545.498 50.417 C 520.104 96.765, 510.963 115.754, 497.643 149.829 L 495.169 156.158 499.258 159.829 C 501.506 161.848, 505.856 165.886, 508.923 168.803 C 514.916 174.501, 533.115 188.540, 544.500 196.247 L 551.500 200.986 555 200.004 C 556.925 199.463, 564.575 197.398, 572 195.413 C 598.735 188.266, 638.536 173.555, 660.651 162.645 L 669.802 158.131 670.829 154.815 C 671.394 152.992, 673.495 144.975, 675.496 137 C 677.498 129.025, 680.414 118.225, 681.977 113 C 685.804 100.204, 687.569 92.483, 689.521 80 C 690.424 74.225, 691.800 66.350, 692.578 62.500 L 693.992 55.500 690.746 52.647 C 688.961 51.078, 682.325 45.894, 676 41.128 C 669.675 36.361, 660.746 29.545, 656.159 25.980 C 651.571 22.416, 646.561 18.600, 645.025 17.500 C 643.490 16.400, 639.311 13.363, 635.740 10.750 C 632.168 8.137, 629.078 6.039, 628.873 6.086 C 628.668 6.133, 627.372 6.515, 625.994 6.934 M 745.010 58.250 C 745.091 61.688, 745.122 70.479, 745.079 77.787 L 745 91.073 738.750 84.299 C 731.714 76.672, 709.265 54.650, 708.089 54.221 C 707.280 53.925, 706.005 97.940, 706.002 126.250 C 706.001 135.463, 706.353 143, 706.784 143 C 707.937 143, 730.778 119.706, 738.150 111.011 L 744.500 103.522 745 121.779 L 745.500 140.036 757.633 127.768 C 764.306 121.020, 774.332 110.327, 779.913 104.004 L 790.060 92.508 775.780 78.495 C 761.408 64.391, 747.358 52, 745.736 52 C 745.256 52, 744.929 54.813, 745.010 58.250 M 308.164 62.350 C 302.259 77.901, 295.568 95.236, 292.474 103 L 289.088 111.500 290.088 111.848 C 290.639 112.040, 293.431 111.281, 296.294 110.163 C 299.157 109.045, 305.371 106.931, 310.102 105.465 C 314.834 104, 319.221 102.482, 319.851 102.092 L 320.997 101.384 316.956 81.942 C 314.733 71.249, 312.651 61.253, 312.328 59.729 C 312.006 58.205, 311.462 56.788, 311.121 56.579 C 310.779 56.371, 309.449 58.968, 308.164 62.350 M 134.500 61.185 C 127.900 62.263, 121.600 63.262, 120.500 63.406 C 119.400 63.549, 116.158 64.021, 113.295 64.456 L 108.091 65.246 106.955 70.873 C 106.330 73.968, 104.998 79.875, 103.996 84 C 101.877 92.716, 100.898 99, 101.659 99 C 102.819 99, 114.275 95.469, 129.500 90.420 L 145.500 85.113 147.111 76.306 C 147.997 71.463, 149.015 65.588, 149.373 63.250 L 150.024 59 148.262 59.113 C 147.293 59.175, 141.100 60.107, 134.500 61.185 M 618.500 70.229 C 615.750 71.229, 612.600 72.462, 611.500 72.969 C 610.400 73.476, 604.707 75.589, 598.850 77.664 L 588.200 81.436 581.963 103.468 C 578.533 115.586, 574.718 128.313, 573.487 131.750 C 572.256 135.188, 571.648 138, 572.137 138 C 572.626 138, 583.926 132.446, 597.249 125.659 L 621.473 113.317 622.212 109.409 C 623.221 104.072, 624.619 73.931, 624 70.877 L 623.500 68.411 618.500 70.229" stroke="none" fill="currentColor" fill-rule="evenodd"/></g></svg></a>
+  <p class="scrawl hero-scrawl" aria-hidden="true">era<br>solo un<br>rato</p>
+  <h1 class="sr">RATO. Era solo un rato.</h1>
+  <div class="hero-tees" aria-hidden="true">
+   <img class="ht ht1" src="img/el-ultimo-espalda.webp" width="718" height="723" alt="">
+   <img class="ht ht2" src="img/plan-abierto-espalda.webp" width="738" height="698" alt="">
+   <img class="ht ht3" src="img/donde-siempre-espalda.webp" width="732" height="691" alt="">
+  </div>
+  <nav class="nav nav-hero" aria-label="Secciones"><ul class="nav-top"><li><a href="#marca">la marca</a></li><li><a href="#coleccion">colección</a></li><li><a href="#como-va">cómo va</a></li></ul>
+<div class="nav-tees"><span class="nav-hand"><svg class="iso" viewBox="4 5 84 90" aria-hidden="true"><g><path d="M 43.010 11.250 C 43.091 14.688, 43.122 23.479, 43.079 30.787 L 43 44.073 36.750 37.299 C 29.714 29.672, 7.265 7.650, 6.089 7.221 C 5.280 6.925, 4.005 50.940, 4.002 79.250 C 4.001 88.463, 4.353 96, 4.784 96 C 5.937 96, 28.778 72.706, 36.150 64.011 L 42.500 56.522 43 74.779 L 43.500 93.036 55.633 80.768 C 62.306 74.020, 72.332 63.327, 77.913 57.004 L 88.060 45.508 73.780 31.495 C 59.408 17.391, 45.358 5, 43.736 5 C 43.256 5, 42.929 7.813, 43.010 11.250" stroke="none" fill="currentColor" fill-rule="evenodd"/></g></svg></span><ul><li><a href="#plan-abierto">plan abierto</a></li><li><a href="#la-de-siempre">la de siempre</a></li><li><a href="#donde-siempre">donde siempre</a></li><li><a href="#la-despedida">la despedida</a></li><li><a href="#el-ultimo">el último</a></li></ul></div></nav>
+  <p class="hero-note"><span>Colección de lanzamiento</span><b>Bajamos un momento</b></p>
+ </div>
+ <svg class="torn to-red" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0.0,23.2 L12.5,19.2 L22.2,18.9 L28.5,24.9 L37.5,3.4 L48.5,31.2 L48.5,20.0 L60.8,33.2 L70.8,33.6 L87.4,2.3 L107.7,20.3 L107.7,19.9 L121.8,20.9 L134.2,24.0 L140.8,19.0 L153.6,24.8 L165.5,25.3 L179.4,29.2 L191.2,26.4 L204.5,22.6 L211.7,24.7 L219.2,25.8 L233.9,6.1 L251.9,27.2 L251.9,32.0 L264.8,27.5 L275.4,31.4 L286.1,28.6 L301.2,5.2 L319.6,33.9 L319.6,31.2 L329.4,28.7 L342.1,1.3 L357.6,19.9 L357.6,18.9 L364.9,22.0 L379.6,19.3 L391.1,32.1 L405.7,22.5 L415.3,32.1 L422.8,20.8 L431.2,25.8 L439.8,18.1 L449.5,27.1 L462.4,26.2 L475.1,18.9 L488.9,32.0 L498.9,24.4 L513.3,0.5 L530.8,19.1 L530.8,21.3 L540.2,18.8 L549.8,0.8 L561.6,23.8 L561.6,18.4 L573.7,20.4 L583.2,23.8 L599.7,7.9 L619.8,25.5 L619.8,25.7 L629.0,2.7 L640.1,22.2 L640.1,31.3 L646.3,33.2 L653.8,26.7 L667.1,7.8 L683.4,31.8 L683.4,29.1 L693.1,20.7 L704.4,30.5 L712.6,31.0 L727.2,30.9 L740.6,21.6 L750.1,18.5 L761.0,2.1 L774.3,29.1 L774.3,33.3 L789.6,33.8 L799.3,21.5 L807.2,21.3 L822.2,31.4 L834.8,30.8 L849.4,7.3 L867.3,30.5 L867.3,30.0 L875.1,30.6 L889.1,33.5 L899.1,33.1 L906.8,20.0 L921.9,30.9 L936.1,33.7 L945.6,26.8 L951.8,33.5 L963.0,32.9 L977.8,31.2 L986.3,22.7 L998.1,22.1 L1000.0,26.0 L1000,60 Z"/></svg>
+</header>
+
+<main class="red" id="coleccion">
+ <div class="strip wrap"><p>cada camiseta es</p><p>un plan que se alarga</p></div>
+ <div class="wrap red-grid">
+  <div class="items">
+   <section class="intro" aria-labelledby="t-col">
+    <h2 id="t-col" class="sr">Colección Bajamos un momento</h2>
+    <p class="scrawl intro-scrawl" aria-hidden="true">bajamos<br>un momento</p>
+    <p class="intro-text">Cinco camisetas para cinco maneras de no volver a la hora. Gráfico grande en la espalda, firma pequeña delante y tinta Tomate.</p>
+   </section>
+   <article class="item item-l" id="plan-abierto" aria-labelledby="t-plan-abierto">
+ <p class="scrawl item-scrawl" aria-hidden="true">plan<br>abierto</p>
+ <figure class="shot back"><img src="img/plan-abierto-espalda.webp" width="740" height="700" alt="Plan abierto, espalda: Dos sillas, una mesa redonda y «EL PLAN ERA VOLVER PRONTO.»"></figure>
+ <figure class="shot front"><img src="img/plan-abierto-delante.webp" width="740" height="700" alt="Plan abierto, delante: Silla plegable y RATO en el centro del pecho."></figure>
+ <div class="info">
+  <p class="num">01.</p>
+  <h3 id="t-plan-abierto" class="item-name">Plan abierto</h3>
+  <p class="lead">Dos sillas, una mesa y nadie con prisa.</p>
+  <dl class="spec">
+   <div><dt>Delante</dt><dd>Silla plegable y RATO en el centro del pecho.</dd></div>
+   <div><dt>Espalda</dt><dd>Dos sillas, una mesa redonda y «EL PLAN ERA VOLVER PRONTO.»</dd></div>
+   <div><dt>Camiseta</dt><dd>Mantequilla · tinta Tomate</dd></div>
+   <div><dt>Detalle</dt><dd>Etiqueta RATO en el cuello.</dd></div>
+   <div><dt>Tallas</dt><dd>Por confirmar</dd></div>
+   <div><dt>Precio</dt><dd>Por anunciar</dd></div>
+  </dl>
+ </div>
+ <p class="vert" aria-hidden="true">delante · espalda · 01/05</p>
+</article><article class="item item-r" id="la-de-siempre" aria-labelledby="t-la-de-siempre">
+ <p class="scrawl item-scrawl" aria-hidden="true">la de<br>siempre</p>
+ <figure class="shot back"><img src="img/la-de-siempre-espalda.webp" width="740" height="700" alt="La de siempre, espalda: Dos tazas, una cucharilla y «SIN MIRAR LA HORA.»"></figure>
+ <figure class="shot front"><img src="img/la-de-siempre-delante.webp" width="740" height="700" alt="La de siempre, delante: RATO pequeño en el lado del corazón."></figure>
+ <div class="info">
+  <p class="num">02.</p>
+  <h3 id="t-la-de-siempre" class="item-name">La de siempre</h3>
+  <p class="lead">El café de siempre, en la mesa de siempre.</p>
+  <dl class="spec">
+   <div><dt>Delante</dt><dd>RATO pequeño en el lado del corazón.</dd></div>
+   <div><dt>Espalda</dt><dd>Dos tazas, una cucharilla y «SIN MIRAR LA HORA.»</dd></div>
+   <div><dt>Camiseta</dt><dd>Tiza · tinta Tomate</dd></div>
+   <div><dt>Detalle</dt><dd>Etiqueta Tomate en el bajo.</dd></div>
+   <div><dt>Tallas</dt><dd>Por confirmar</dd></div>
+   <div><dt>Precio</dt><dd>Por anunciar</dd></div>
+  </dl>
+ </div>
+ <p class="vert" aria-hidden="true">delante · espalda · 02/05</p>
+</article><article class="item item-l" id="donde-siempre" aria-labelledby="t-donde-siempre">
+ <p class="scrawl item-scrawl" aria-hidden="true">donde<br>siempre</p>
+ <figure class="shot back"><img src="img/donde-siempre-espalda.webp" width="740" height="700" alt="Donde siempre, espalda: Una nota a mano: «nos vemos donde siempre.» y la doble flecha."></figure>
+ <figure class="shot front"><img src="img/donde-siempre-delante.webp" width="740" height="700" alt="Donde siempre, delante: Cuello Tomate en contraste y RATO justo debajo."></figure>
+ <div class="info">
+  <p class="num">03.</p>
+  <h3 id="t-donde-siempre" class="item-name">Donde siempre</h3>
+  <p class="lead">No hace falta decir dónde.</p>
+  <dl class="spec">
+   <div><dt>Delante</dt><dd>Cuello Tomate en contraste y RATO justo debajo.</dd></div>
+   <div><dt>Espalda</dt><dd>Una nota a mano: «nos vemos donde siempre.» y la doble flecha.</dd></div>
+   <div><dt>Camiseta</dt><dd>Tiza con cuello Tomate · tinta Tomate</dd></div>
+   <div><dt>Detalle</dt><dd>Aberturas laterales en el bajo.</dd></div>
+   <div><dt>Tallas</dt><dd>Por confirmar</dd></div>
+   <div><dt>Precio</dt><dd>Por anunciar</dd></div>
+  </dl>
+ </div>
+ <p class="vert" aria-hidden="true">delante · espalda · 03/05</p>
+</article><article class="item item-r" id="la-despedida" aria-labelledby="t-la-despedida">
+ <p class="scrawl item-scrawl" aria-hidden="true">la<br>despedida</p>
+ <figure class="shot back"><img src="img/la-despedida-espalda.webp" width="740" height="700" alt="La despedida, espalda: Tres amigos en el portal y «nos despedimos hace un rato.»"></figure>
+ <figure class="shot front"><img src="img/la-despedida-delante.webp" width="740" height="700" alt="La despedida, delante: RATO y «AHORA SUBO.» en el pecho."></figure>
+ <div class="info">
+  <p class="num">04.</p>
+  <h3 id="t-la-despedida" class="item-name">La despedida</h3>
+  <p class="lead">La despedida que dura más que el plan.</p>
+  <dl class="spec">
+   <div><dt>Delante</dt><dd>RATO y «AHORA SUBO.» en el pecho.</dd></div>
+   <div><dt>Espalda</dt><dd>Tres amigos en el portal y «nos despedimos hace un rato.»</dd></div>
+   <div><dt>Camiseta</dt><dd>Tiza · tinta Tomate</dd></div>
+   <div><dt>Detalle</dt><dd>Ilustración de línea fina.</dd></div>
+   <div><dt>Tallas</dt><dd>Por confirmar</dd></div>
+   <div><dt>Precio</dt><dd>Por anunciar</dd></div>
+  </dl>
+ </div>
+ <p class="vert" aria-hidden="true">delante · espalda · 04/05</p>
+</article><article class="item item-l" id="el-ultimo" aria-labelledby="t-el-ultimo">
+ <p class="scrawl item-scrawl" aria-hidden="true">el<br>último</p>
+ <figure class="shot back"><img src="img/el-ultimo-espalda.webp" width="740" height="700" alt="El último, espalda: «El último y nos vamos.», cafetera, dos tazas y «ERA SOLO UN RATO.»"></figure>
+ <figure class="shot front"><img src="img/el-ultimo-delante.webp" width="740" height="700" alt="El último, delante: RATO y «ya casi.» escrito a mano."></figure>
+ <div class="info">
+  <p class="num">05.</p>
+  <h3 id="t-el-ultimo" class="item-name">El último</h3>
+  <p class="lead">Siempre hay uno más antes de irse.</p>
+  <dl class="spec">
+   <div><dt>Delante</dt><dd>RATO y «ya casi.» escrito a mano.</dd></div>
+   <div><dt>Espalda</dt><dd>«El último y nos vamos.», cafetera, dos tazas y «ERA SOLO UN RATO.»</dd></div>
+   <div><dt>Camiseta</dt><dd>Tiza · tinta Tomate y Asfalto</dd></div>
+   <div><dt>Detalle</dt><dd>La frase de la espalda va en Asfalto.</dd></div>
+   <div><dt>Tallas</dt><dd>Por confirmar</dd></div>
+   <div><dt>Precio</dt><dd>Por anunciar</dd></div>
+  </dl>
+ </div>
+ <p class="vert" aria-hidden="true">delante · espalda · 05/05</p>
+</article>
+  </div>
+  <aside class="side"><nav class="nav nav-side" aria-label="Secciones"><ul class="nav-top"><li><a href="#marca">la marca</a></li><li><a href="#coleccion">colección</a></li><li><a href="#como-va">cómo va</a></li></ul>
+<div class="nav-tees"><span class="nav-hand"><svg class="iso" viewBox="4 5 84 90" aria-hidden="true"><g><path d="M 43.010 11.250 C 43.091 14.688, 43.122 23.479, 43.079 30.787 L 43 44.073 36.750 37.299 C 29.714 29.672, 7.265 7.650, 6.089 7.221 C 5.280 6.925, 4.005 50.940, 4.002 79.250 C 4.001 88.463, 4.353 96, 4.784 96 C 5.937 96, 28.778 72.706, 36.150 64.011 L 42.500 56.522 43 74.779 L 43.500 93.036 55.633 80.768 C 62.306 74.020, 72.332 63.327, 77.913 57.004 L 88.060 45.508 73.780 31.495 C 59.408 17.391, 45.358 5, 43.736 5 C 43.256 5, 42.929 7.813, 43.010 11.250" stroke="none" fill="currentColor" fill-rule="evenodd"/></g></svg></span><ul><li><a href="#plan-abierto">plan abierto</a></li><li><a href="#la-de-siempre">la de siempre</a></li><li><a href="#donde-siempre">donde siempre</a></li><li><a href="#la-despedida">la despedida</a></li><li><a href="#el-ultimo">el último</a></li></ul></div></nav></aside>
+ </div>
+
+ <section class="bigmark" aria-labelledby="t-mark">
+  <h2 id="t-mark" class="sr">RATO</h2>
+  <div class="wrap bigmark-wrap">
+   <svg class="apilado" viewBox="11 9 188 229" role="img" aria-label="RATO"><g fill="currentColor"><path d="M 152.500 11.170 C 147.550 12.743, 138.901 15.642, 133.281 17.612 L 123.061 21.196 120.495 29.848 C 119.083 34.607, 117.305 40.300, 116.543 42.500 C 113.400 51.574, 105.964 76.199, 103.408 86 C 101.901 91.775, 100.542 96.664, 100.387 96.864 C 100.055 97.293, 95.560 94.605, 84.261 87.217 L 76.022 81.831 81.261 78.263 C 84.142 76.301, 90.209 71.817, 94.743 68.299 L 102.986 61.902 103.581 59.201 C 103.907 57.715, 104.829 54.115, 105.629 51.201 C 106.430 48.286, 107.348 43.080, 107.670 39.631 L 108.256 33.361 105.036 29.694 L 101.817 26.028 97.659 24.898 L 93.500 23.768 86.500 24.360 L 79.500 24.951 59.500 31.864 C 48.500 35.666, 35.900 40.120, 31.500 41.761 L 23.500 44.744 23.256 47.122 C 23.121 48.430, 22.566 52.425, 22.022 56 C 21.477 59.575, 19.209 76.031, 16.981 92.570 C 14.753 109.108, 12.356 126.572, 11.654 131.378 C 10.952 136.184, 10.695 140.311, 11.082 140.551 C 11.469 140.790, 15.546 139.480, 20.143 137.639 C 24.739 135.799, 32.399 132.832, 37.164 131.046 L 45.828 127.799 46.549 118.193 C 46.945 112.909, 47.546 106.326, 47.884 103.564 L 48.500 98.541 54.250 107.419 C 57.413 112.302, 60 117.071, 60 118.016 C 60 119.774, 66.920 125, 69.248 125 C 69.958 125, 76.775 120.932, 84.397 115.959 L 98.254 106.919 97.588 109.209 C 97.222 110.469, 96.670 112.873, 96.362 114.551 L 95.803 117.603 114.136 111.535 L 132.470 105.467 134.796 95.483 L 137.121 85.500 144.614 81.136 C 148.735 78.736, 152.304 76.971, 152.546 77.213 C 152.788 77.455, 153.932 82.343, 155.088 88.076 C 156.245 93.809, 157.539 98.869, 157.965 99.319 C 158.747 100.147, 165.357 96.382, 181.141 86.119 C 185.894 83.028, 190.564 80.035, 191.520 79.467 L 193.258 78.435 184.634 61.323 C 177.194 46.561, 163 12.940, 163 10.079 C 163 8.184, 161.369 8.353, 152.500 11.170 M 138.025 47.250 C 134.851 61.704, 134.131 65.457, 134.467 65.797 C 134.691 66.024, 147.187 59.606, 148.819 58.426 C 149.341 58.048, 141.554 37.025, 140.887 37.012 C 140.551 37.005, 139.262 41.612, 138.025 47.250 M 62 49.406 C 60.075 50.131, 57.335 51.198, 55.911 51.776 L 53.321 52.828 52.161 59.857 C 50.915 67.403, 50.629 75, 51.591 75 C 51.916 75, 56.145 72.953, 60.989 70.452 L 69.795 65.903 71.898 61.016 C 74.482 55.009, 74.559 51.816, 72.171 49.655 C 69.996 47.686, 66.775 47.607, 62 49.406 M 140.086 110.779 L 120.673 120.452 110.229 141.976 L 99.785 163.500 97.410 178.500 C 96.104 186.750, 94.938 194.936, 94.818 196.691 L 94.599 199.883 99.993 205.691 C 102.959 208.886, 107.662 213.433, 110.443 215.795 L 115.500 220.089 117.500 219.651 C 118.600 219.411, 124 217.314, 129.500 214.992 C 135 212.671, 144.741 208.637, 151.146 206.028 L 162.791 201.285 180.941 182.893 L 199.091 164.500 198.643 147.500 L 198.195 130.500 193.656 118.642 C 191.160 112.120, 188.969 106.636, 188.788 106.455 C 188.607 106.274, 182.843 105.173, 175.980 104.008 C 169.116 102.843, 162.600 101.713, 161.500 101.498 L 159.500 101.107 140.086 110.779 M 102 119.149 C 97.325 120.755, 91.250 122.696, 88.500 123.462 C 68.796 128.951, 59.064 131.870, 41.500 137.563 C 30.500 141.128, 20.964 144.035, 20.309 144.023 C 19.654 144.010, 18.870 144.401, 18.567 144.891 C 17.837 146.072, 11 177.386, 11 179.548 L 11 181.233 12.750 180.699 C 13.713 180.405, 17.650 178.965, 21.500 177.499 C 30.295 174.148, 49.336 168.002, 49.722 168.389 C 49.882 168.548, 49.119 174.038, 48.027 180.589 C 46.269 191.142, 41 233.154, 41 236.621 L 41 237.950 43.250 237.020 C 44.487 236.509, 54.050 232.784, 64.500 228.744 L 83.500 221.397 83.204 188.229 L 82.908 155.062 94.934 149.033 L 106.961 143.004 107.472 140.752 C 107.754 139.513, 108.389 136.700, 108.884 134.500 C 109.379 132.300, 110.508 127.818, 111.392 124.540 C 113.328 117.366, 113.387 115.965, 111.750 116.114 C 111.063 116.177, 106.675 117.543, 102 119.149 M 150.526 132.517 C 146.141 134.896, 142.448 137.215, 142.320 137.671 C 141.583 140.297, 136.934 177.392, 137.191 178.599 L 137.500 180.052 146 173.624 C 150.675 170.089, 156.015 165.902, 157.866 164.319 L 161.232 161.443 160.495 144.721 C 160.089 135.525, 159.474 128.043, 159.129 128.096 C 158.783 128.148, 154.912 130.138, 150.526 132.517" stroke="none" fill="currentColor" fill-rule="evenodd"/></g></svg>
+   <img class="bm-tee" src="img/la-despedida-espalda.webp" width="714" height="735" alt="La despedida, espalda: tres amigos en el portal.">
+   <p class="bm-line">Bajamos un momento.<br>Volvimos tarde.</p>
+  </div>
+ </section>
+ <svg class="torn to-tiza" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 L0.0,28.8 L11.2,26.2 L27.2,22.6 L35.8,22.2 L44.5,19.7 L53.6,27.1 L60.3,21.2 L70.2,29.7 L80.3,19.6 L93.9,24.3 L102.9,32.6 L116.8,33.3 L128.2,29.7 L138.1,20.2 L145.2,29.3 L157.8,3.8 L173.2,19.9 L173.2,25.7 L182.9,32.3 L197.8,21.9 L209.6,0.9 L224.1,29.3 L224.1,22.2 L235.0,3.2 L248.3,29.8 L248.3,25.4 L261.1,18.7 L274.0,30.0 L282.7,4.0 L293.4,28.5 L293.4,18.3 L302.2,19.4 L311.0,25.5 L325.3,7.0 L342.7,28.9 L342.7,19.1 L355.0,18.1 L367.5,33.2 L379.2,27.4 L387.3,26.1 L403.1,5.2 L422.4,21.4 L422.4,21.2 L435.9,20.2 L447.0,22.2 L460.3,33.3 L473.1,22.6 L483.4,25.7 L499.9,1.2 L520.1,25.3 L520.1,32.9 L534.8,22.2 L544.5,23.2 L555.0,31.5 L561.9,28.7 L572.1,18.7 L581.2,23.9 L590.9,22.7 L606.7,24.3 L614.3,28.6 L627.4,26.2 L639.3,18.7 L651.5,21.9 L665.8,22.4 L674.7,27.4 L681.4,25.2 L693.2,23.7 L706.0,22.1 L721.2,21.5 L730.3,27.3 L737.5,21.0 L746.9,4.2 L758.3,25.8 L758.3,33.1 L769.5,18.4 L778.6,21.9 L788.8,20.2 L796.4,21.0 L803.2,30.1 L809.9,28.8 L823.2,31.5 L832.0,25.8 L841.9,33.5 L848.1,19.5 L854.3,27.8 L869.7,33.8 L877.5,19.1 L883.7,19.2 L899.2,26.5 L907.7,6.6 L918.0,29.0 L918.0,23.0 L926.8,20.4 L933.3,23.8 L945.7,25.8 L958.0,19.7 L971.9,21.3 L980.6,27.2 L988.7,25.9 L1006.6,6.3 L1028.5,21.6 L1000.0,26.0 L1000,60 Z"/></svg>
+</main>
+
+<section class="tiza" id="marca" aria-labelledby="t-marca">
+ <div class="wrap marca">
+  <h2 id="t-marca" class="kicker">La marca</h2>
+  <div class="relato">
+   <p>Bajamos un momento. Íbamos a volver pronto.</p>
+   <p>Una vuelta más, alguien que pasaba, un plan que nadie había hecho y que salió solo. Cuando miramos el reloj, ya era tarde.</p>
+   <p>RATO va de eso: del tiempo que se estira cuando estás donde quieres estar.</p>
+  </div>
+  <p class="lema">Era solo<br>un rato.</p>
+ </div>
+</section>
+
+<section class="como" id="como-va" aria-labelledby="t-como">
+ <div class="wrap como-wrap">
+  <h2 id="t-como" class="kicker">Cómo va</h2>
+  <dl class="estado">
+   <div><dt>Colección</dt><dd>Bajamos un momento · 5 camisetas</dd></div>
+   <div><dt>Lanzamiento</dt><dd>Fecha por anunciar</dd></div>
+   <div><dt>Tallas y medidas</dt><dd>Se publican con la muestra final</dd></div>
+   <div><dt>Precios</dt><dd>Por anunciar</dd></div>
+   <div><dt>Envíos</dt><dd>Por anunciar</dd></div>
+  </dl>
+  <p class="como-note">Las fotos son vistas de diseño de las camisetas. Cuando tengamos las prendas reales, las cambiaremos por fotos de verdad.</p>
+ </div>
+</section>
+
+<footer class="foot">
+ <div class="wrap foot-wrap">
+  <p class="foot-lema">ERA SOLO UN RATO.</p>
+  <ul class="foot-links"><li><a href="#marca">la marca</a></li><li><a href="#coleccion">colección</a></li><li><a href="#como-va">cómo va</a></li></ul>
+  <p class="foot-copy">© 2026 RATO</p>
+ </div>
+ <div class="foot-giant" aria-hidden="true"><svg class="giant" viewBox="9 5 781 202" role="img" aria-label="RATO"><g fill="currentColor"><path d="M 204.500 6.587 C 189.939 7.731, 175.607 8.890, 156 10.508 C 153.525 10.712, 146.100 11.155, 139.500 11.493 C 132.900 11.831, 121.425 12.751, 114 13.538 C 106.575 14.325, 92.400 15.489, 82.500 16.126 C 72.600 16.763, 60.690 17.558, 56.034 17.892 L 47.567 18.500 46.693 22.500 C 46.212 24.700, 42.976 38.200, 39.502 52.500 C 36.027 66.800, 32.479 81.875, 31.618 86 C 26.768 109.209, 22.753 128.280, 21.511 134 C 20.735 137.575, 19.160 145.675, 18.010 152 C 16.861 158.325, 15.288 166.875, 14.515 171 C 12.545 181.513, 8.801 207.138, 9.183 207.495 C 9.601 207.886, 31.349 203.890, 63.500 197.513 L 89.500 192.356 91.102 179.928 C 92.659 167.848, 96.777 143.889, 97.405 143.262 C 97.576 143.091, 102.393 148.197, 108.108 154.610 C 123.295 171.650, 131.322 180.314, 141.993 191.181 L 151.500 200.862 163.508 196.093 C 170.113 193.469, 177.088 190.588, 179.008 189.688 C 180.929 188.789, 186.907 186.467, 192.294 184.529 C 197.681 182.590, 203.897 180.130, 206.108 179.062 C 208.318 177.994, 209.986 177.454, 209.813 177.861 C 205.522 188.009, 202.841 195.174, 203.199 195.533 C 203.450 195.783, 209.020 195.334, 215.577 194.535 C 222.135 193.735, 232 192.610, 237.500 192.033 C 252.397 190.473, 274.895 187.446, 275.341 186.942 C 275.556 186.699, 278.261 179.899, 281.351 171.830 C 284.441 163.762, 287.493 156.013, 288.131 154.611 L 289.293 152.062 296.396 149.380 C 300.303 147.904, 307.311 145.215, 311.970 143.402 C 316.628 141.590, 320.585 140.252, 320.763 140.430 C 321.105 140.771, 322.252 153.785, 324.120 178.500 C 324.744 186.750, 325.411 193.676, 325.602 193.892 C 326.048 194.393, 340.452 189.133, 354.041 183.507 C 359.839 181.107, 365.914 178.831, 367.541 178.450 C 370.376 177.787, 398.135 167.174, 398.842 166.483 C 399.356 165.981, 390.710 134.221, 387.004 123 C 383.618 112.747, 381.102 103.538, 378.170 90.671 L 375.246 77.843 376.373 77.498 C 376.993 77.309, 383.350 76.897, 390.500 76.582 C 397.650 76.268, 409.462 75.733, 416.750 75.392 L 430 74.773 430 75.676 C 430 76.173, 428.638 81.062, 426.973 86.540 C 422.856 100.090, 421.229 105.620, 413.012 134 C 409.110 147.475, 405.262 160.750, 404.461 163.500 C 400.797 176.082, 396.129 194.462, 396.503 194.836 C 396.730 195.063, 407.848 193.833, 421.208 192.102 C 434.569 190.371, 446.850 188.785, 448.500 188.578 C 464.552 186.562, 477.555 184.761, 477.804 184.520 C 478.099 184.234, 480.314 161.709, 481.443 147.500 C 483.645 119.818, 487.908 82.170, 490.062 71.390 L 491.083 66.281 499.292 64.178 C 503.806 63.022, 513.793 60.575, 521.484 58.741 L 535.468 55.405 538.776 47.503 C 540.596 43.156, 543.178 36.427, 544.514 32.550 C 545.850 28.672, 548.523 21.675, 550.454 17 C 552.386 12.325, 553.974 7.892, 553.983 7.149 L 554 5.797 546.750 6.482 C 542.763 6.859, 537.925 7.334, 536 7.537 C 534.075 7.741, 525.975 8.392, 518 8.985 C 510.025 9.578, 492.475 10.926, 479 11.981 C 465.525 13.036, 448.650 14.173, 441.500 14.507 C 434.350 14.841, 427.600 15.307, 426.500 15.541 C 424.729 15.919, 411.321 17.145, 393.500 18.560 C 390.200 18.821, 385.618 19.276, 383.318 19.569 L 379.136 20.102 378.586 22.801 C 378.283 24.285, 377.109 31.125, 375.977 38 C 374.845 44.875, 373.409 52.975, 372.785 56 L 371.651 61.500 370.317 56 C 368.232 47.400, 362.259 17.082, 361.488 11.180 L 360.793 5.859 357.146 6.400 C 355.141 6.697, 347.650 7.652, 340.500 8.523 C 329.979 9.803, 299.214 14.296, 284.500 16.701 L 281.500 17.191 278.598 23.845 C 277.002 27.505, 273.010 36.125, 269.726 43 C 266.442 49.875, 260.902 61.667, 257.414 69.205 C 253.926 76.743, 250.626 83.718, 250.081 84.705 C 248.818 86.988, 243.630 98.381, 239.608 107.702 C 237.899 111.663, 232.232 124.795, 227.015 136.884 L 217.529 158.865 211.515 153.179 C 185.432 128.523, 172 115.476, 172 114.798 C 172 114.359, 172.440 114, 172.978 114 C 174.045 114, 177.257 112.511, 211.500 96.140 L 234.500 85.145 236.805 79.322 C 238.073 76.120, 240.003 71.555, 241.094 69.178 C 244.577 61.590, 248.697 50.751, 251.425 42 L 254.075 33.500 246.287 26.215 C 237.176 17.692, 222.422 4.944, 221.877 5.126 C 221.670 5.195, 213.850 5.853, 204.500 6.587 M 625.994 6.934 C 624.615 7.354, 622.012 8.460, 620.209 9.392 C 618.405 10.325, 611.433 12.795, 604.715 14.883 C 597.997 16.970, 589.125 20.062, 585 21.753 C 580.875 23.445, 572.429 26.759, 566.230 29.118 L 554.961 33.408 552.124 38.454 C 550.564 41.229, 547.582 46.612, 545.498 50.417 C 520.104 96.765, 510.963 115.754, 497.643 149.829 L 495.169 156.158 499.258 159.829 C 501.506 161.848, 505.856 165.886, 508.923 168.803 C 514.916 174.501, 533.115 188.540, 544.500 196.247 L 551.500 200.986 555 200.004 C 556.925 199.463, 564.575 197.398, 572 195.413 C 598.735 188.266, 638.536 173.555, 660.651 162.645 L 669.802 158.131 670.829 154.815 C 671.394 152.992, 673.495 144.975, 675.496 137 C 677.498 129.025, 680.414 118.225, 681.977 113 C 685.804 100.204, 687.569 92.483, 689.521 80 C 690.424 74.225, 691.800 66.350, 692.578 62.500 L 693.992 55.500 690.746 52.647 C 688.961 51.078, 682.325 45.894, 676 41.128 C 669.675 36.361, 660.746 29.545, 656.159 25.980 C 651.571 22.416, 646.561 18.600, 645.025 17.500 C 643.490 16.400, 639.311 13.363, 635.740 10.750 C 632.168 8.137, 629.078 6.039, 628.873 6.086 C 628.668 6.133, 627.372 6.515, 625.994 6.934 M 745.010 58.250 C 745.091 61.688, 745.122 70.479, 745.079 77.787 L 745 91.073 738.750 84.299 C 731.714 76.672, 709.265 54.650, 708.089 54.221 C 707.280 53.925, 706.005 97.940, 706.002 126.250 C 706.001 135.463, 706.353 143, 706.784 143 C 707.937 143, 730.778 119.706, 738.150 111.011 L 744.500 103.522 745 121.779 L 745.500 140.036 757.633 127.768 C 764.306 121.020, 774.332 110.327, 779.913 104.004 L 790.060 92.508 775.780 78.495 C 761.408 64.391, 747.358 52, 745.736 52 C 745.256 52, 744.929 54.813, 745.010 58.250 M 308.164 62.350 C 302.259 77.901, 295.568 95.236, 292.474 103 L 289.088 111.500 290.088 111.848 C 290.639 112.040, 293.431 111.281, 296.294 110.163 C 299.157 109.045, 305.371 106.931, 310.102 105.465 C 314.834 104, 319.221 102.482, 319.851 102.092 L 320.997 101.384 316.956 81.942 C 314.733 71.249, 312.651 61.253, 312.328 59.729 C 312.006 58.205, 311.462 56.788, 311.121 56.579 C 310.779 56.371, 309.449 58.968, 308.164 62.350 M 134.500 61.185 C 127.900 62.263, 121.600 63.262, 120.500 63.406 C 119.400 63.549, 116.158 64.021, 113.295 64.456 L 108.091 65.246 106.955 70.873 C 106.330 73.968, 104.998 79.875, 103.996 84 C 101.877 92.716, 100.898 99, 101.659 99 C 102.819 99, 114.275 95.469, 129.500 90.420 L 145.500 85.113 147.111 76.306 C 147.997 71.463, 149.015 65.588, 149.373 63.250 L 150.024 59 148.262 59.113 C 147.293 59.175, 141.100 60.107, 134.500 61.185 M 618.500 70.229 C 615.750 71.229, 612.600 72.462, 611.500 72.969 C 610.400 73.476, 604.707 75.589, 598.850 77.664 L 588.200 81.436 581.963 103.468 C 578.533 115.586, 574.718 128.313, 573.487 131.750 C 572.256 135.188, 571.648 138, 572.137 138 C 572.626 138, 583.926 132.446, 597.249 125.659 L 621.473 113.317 622.212 109.409 C 623.221 104.072, 624.619 73.931, 624 70.877 L 623.500 68.411 618.500 70.229" stroke="none" fill="currentColor" fill-rule="evenodd"/></g></svg></div>
+</footer>
+
+</body></html>
